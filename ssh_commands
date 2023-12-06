@@ -1,0 +1,34 @@
+Options	Description 	Syntax
+-1	 Forces ssh to use protocol SSH-1 only.	
+ssh -1 user@host
+-2	 Forces ssh to use protocol SSH-2 only.	
+ssh -2 user@host
+-4	Allows IPv4 addresses only.	
+ssh -4 user@host
+-6	Allows IPv6 addresses only.	
+ssh -6 user@host
+-A	Authentication agent connection forwarding is enabled.	
+ssh -A user@host
+-a	Authentication agent connection forwarding is disabled.	
+ssh -a user@host
+-C	Compresses all data (including stdin, stdout, stderr, and data for forwarded X11 and TCP connections) for a faster transfer of data.	
+ssh -C user@host
+-c	Selects the cipher specification for encrypting the session. Specific cipher algorithm will be selected only if both the client and the server support it.	
+ssh -c aes256-cbc user@host
+-f	Requests ssh to go to background just before command execution.	
+ssh -f user@host command
+-g	Allows remote hosts to connect to local forwarded ports.	
+ssh -g -L 8080:localhost:80 user@host
+-n	 Prevents reading from stdin.	
+ssh -n user@host command
+-p	 Port to connect to on the remote host.	
+ssh -p 2222 user@host
+-q	Suppresses all errors and warnings	
+ssh -q user@host
+-V	Display the version number.	
+ssh -V
+-v	 Verbose mode. It echoes everything it is doing while establishing a connection. It is very useful in the debugging of connection failures.	
+ssh -v user@host
+-X	Enables X11 forwarding (GUI Forwarding).	
+ssh -X user@host
+
